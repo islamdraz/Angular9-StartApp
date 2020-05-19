@@ -50,6 +50,11 @@ export class ProductListComponent implements OnInit{
       this._listFilter='cart';
     }
 
+
+    onRatingClicked(rateMessage:string):void{
+      this.title="product list "+rateMessage;
+    }
+
     performFilter(filter:string):IProduct[]{
       filter=filter.toLocaleLowerCase();
       return this.products.filter((item:IProduct)=>
