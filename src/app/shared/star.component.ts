@@ -1,14 +1,17 @@
 import { Component, OnChanges, Input, EventEmitter, Output } from '@angular/core';
+import { ProductService } from '../Procuct/product.service';
 
 
 @Component({
     selector:'pm-star',
     templateUrl:'./star.component.html',
     styleUrls:['./star.component.css']
+ 
+
 })
 export class StarComponent implements OnChanges{
    
-   
+
     ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
        this.starWidth=this.rating*75/5;
     }
