@@ -3,16 +3,18 @@ import { NgModule  } from '@angular/core';
 import { HttpClientModule  } from '@angular/common/http';
 import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './Procuct/productList.component';
+import { ProductListComponent } from './product/productList.component';
 import { ConvertToSpacePipe } from './shared/convert-to-space-pipe';
 import { StarComponent } from './shared/star.component';
+import { ProductDetailComponent } from './product/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ConvertToSpacePipe,
-    StarComponent
+    StarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
