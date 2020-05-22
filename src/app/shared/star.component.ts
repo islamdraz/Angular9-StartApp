@@ -1,5 +1,4 @@
 import { Component, OnChanges, Input, EventEmitter, Output } from '@angular/core';
-import { ProductService } from '../product/product.service';
 
 
 @Component({
