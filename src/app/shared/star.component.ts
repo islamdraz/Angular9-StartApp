@@ -20,7 +20,7 @@ export class StarComponent implements OnChanges{
     
     @Output() ratingEventClicked:EventEmitter<string>=new EventEmitter<string>();
     onClick():void{
-        console.log(`the rating is ${this.rating}` )
+        console.log(` ${this.rating}` )
 
         this.ratingEventClicked.emit(`the rating is ${this.rating}`)
     }

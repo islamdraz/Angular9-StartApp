@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="tabel-responseve">
+    <!-- <div class="tabel-responseve">
         <table class="table" *ngIf="products &&products.length>0">
             <thead>
                 <tr>
@@ -41,9 +41,25 @@
                     <td>{{product.productCode | lowercase | convertToSpace:'-'}}</td>
                     <td>{{product.releaseDate}}</td>
                     <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
-                    <!-- <td><pm-star [rating]='product.starRating' (ratingEventClicked)='onRatingClicked($event)'></pm-star> </td> -->
+                   
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
+
+    <a1-dynamic-tabel [columns]='productColumns'>
+
+        <tr *ngFor="let product of filterProducts">
+            <td><img *ngIf='showImage' [src]='product.imageUrl'
+                [title]='product.productName'
+                 alt=""
+                 [style.width.px]='imageWidth'
+                 [style.margine.px]='imageMargine'/></td>
+            <td> <a [routerLink]="['/product/',product.productId ]" >{{product.productName}}</a> </td>
+            <td>{{product.productCode | lowercase }}</td>
+            <td>{{product.releaseDate}}</td>
+            <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
+             <td><pm-star [rating]='product.starRating' (ratingEventClicked)='onRatingClicked($event)'></pm-star> </td> 
+        </tr>
+    </a1-dynamic-tabel>
 </div>

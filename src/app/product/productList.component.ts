@@ -8,6 +8,16 @@ import { ProductService } from './product.service';
 })
 export class ProductListComponent implements OnInit{
    
+  productColumns:any=[
+    {displayName:'image',columName:'',isSortable:true},
+    {displayName:'Product',columName:'',isSortable:true},
+    {displayName:'Code',columName:'',isSortable:true},
+    {displayName:'Avaible',columName:'',isSortable:true},
+    {displayName:'Price',columName:'',isSortable:true},
+    {displayName:'5 star Rating',columName:'',isSortable:true}
+  
+   ]
+
     title:string ='product list!';
     imageWidth:number=50;
     imageMargine:number=2;
